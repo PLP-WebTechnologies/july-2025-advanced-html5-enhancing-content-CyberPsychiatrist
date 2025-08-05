@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about enhancing a web page.">
+    <meta name="keywords" content="Developer,Data Analyst">
+    <meta name="author" content="Humphrey Maina">
+    <title>Enhanced HTML5 Content & Mastering Forms</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; background: #f9f9f9; color: #222; }
+        header, main, section, footer { margin-bottom: 2rem; }
+        header { border-bottom: 2px solid #0077cc; padding-bottom: 1rem; }
+        h1, h2, h3 { color: #0077cc; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 1rem; }
+        th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+        th { background: #e6f2fa; }
+        fieldset { border: 1px solid #0077cc; padding: 1rem; margin-bottom: 1rem; }
+        legend { color: #0077cc; font-weight: bold; }
+        label { display: block; margin-top: 1rem; }
+        input, select, textarea { width: 100%; padding: 0.5rem; margin-top: 0.25rem; border: 1px solid #ccc; border-radius: 4px; }
+        input[type="checkbox"], input[type="radio"] { width: auto; }
+        button { background: #0077cc; color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #005fa3; }
+        .media { display: flex; gap: 2rem; align-items: center; }
+        .media img, .media video, .media audio { max-width: 300px; border-radius: 8px; }
+        @media (max-width: 700px) {
+            .media { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Content Enhancement & Form Mastery</h1>
+        <p>Showcasing advanced elements: lists, tables, media, and a complete, accessible form.</p>
+    </header>
+    <main>
+        <section>
+            <h2>1. Organizing Content with Lists</h2>
+            <h3>Favorite Programming Languages (Ordered List)</h3>
+            <ol>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>SQL</li>
+            </ol>
+            <h3>Web Development Skills (Unordered List)</h3>
+            <ul>
+                <li>Semantic HTML</li>
+                <li>Responsive CSS</li>
+                <li>Accessibility</li>
+                <li>Form Validation</li>
+                <li>Media Embedding</li>
+            </ul>
+            <h3>Steps to Build a Web Form (Description List)</h3>
+            <dl>
+                <dt>Plan</dt>
+                <dd>Define the purpose and required fields.</dd>
+                <dt>Structure</dt>
+                <dd>Use semantic tags and group related fields.</dd>
+                <dt>Validate</dt>
+                <dd>Apply HTML5 validation attributes.</dd>
+                <dt>Style</dt>
+                <dd>Enhance usability and clarity with CSS.</dd>
+            </dl>
+        </section>
+        <section>
+            <h2>2. Displaying Data with Tables</h2>
+            <table>
+                <caption>Sample Student Grades</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Subject</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alice</td>
+                        <td>Math</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Bob</td>
+                        <td>Science</td>
+                        <td>B+</td>
+                    </tr>
+                    <tr>
+                        <td>Charlie</td>
+                        <td>History</td>
+                        <td>A-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>3. Embedding Media</h2>
+            <div class="media">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Laptop on desk">
+                    <figcaption>Sample Image: Workstation</figcaption>
+                </figure>
+                <figure>
+                    <audio controls>
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <figcaption>Sample Audio: SoundHelix Song</figcaption>
+                </figure>
+                <figure>
+                    <video controls width="300">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption>Sample Video: Big Buck Bunny</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h2>4. Complete HTML5 Form</h2>
+            <form action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fullname">Full Name *</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="e.g. Jane Doe" required minlength="3" maxlength="50" autocomplete="name">
+
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. jane@example.com" required autocomplete="email">
+
+                    <label for="dob">Date of Birth *</label>
+                    <input type="date" id="dob" name="dob" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Account Details</legend>
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username" placeholder="Choose a username" required pattern="^[a-zA-Z0-9_]{5,15}$" title="5-15 characters, letters, numbers, or underscores" autocomplete="username">
+
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required minlength="8" autocomplete="new-password">
+
+                    <label for="confirm">Confirm Password *</label>
+                    <input type="password" id="confirm" name="confirm" placeholder="Re-enter your password" required minlength="8" autocomplete="new-password">
+                </fieldset>
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <label>Favorite Language *</label>
+                    <select name="favlang" id="favlang" required>
+                        <option value="">--Select--</option>
+                        <option value="python">Python</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="java">Java</option>
+                        <option value="go">Go</option>
+                        <option value="rust">Rust</option>
+                    </select>
+
+                    <label>Subscribe to newsletter</label>
+                    <input type="checkbox" id="newsletter" name="newsletter" checked readonly>
+                    <span>(You are automatically subscribed)</span>
+
+                    <label>Gender *</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male" style="display:inline;">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female" style="display:inline;">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other" style="display:inline;">Other</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Feedback</legend>
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Your feedback..."></textarea>
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Phr3edevelopers 2025 All rights reserved.</p>
+    </footer>
+</body>
+</html>
